@@ -1,4 +1,4 @@
-package com.baymin.restroomapi.entity;
+package com.baymin.scaffold.entity;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
@@ -64,36 +64,6 @@ public class RestRoom implements Serializable {
     private List<DeviceCamera> deviceCameras= new ArrayList<>();
 
 
-    @OneToMany(mappedBy = "restRoom",
-            cascade = CascadeType.ALL,
-            orphanRemoval = true)
-    @JsonManagedReference
-    @ApiModelProperty(value = "厕所里公告屏")
-    private List<DeviceBoard> deviceBoards = new ArrayList<>();
-
-    @OneToMany(mappedBy = "restRoom",
-            cascade = CascadeType.ALL,
-            orphanRemoval = true)
-    @JsonManagedReference
-    @ApiModelProperty(value = "厕所里气体检测")
-    private List<DeviceGas> deviceGases= new ArrayList<>();
-
-
-    @OneToMany(mappedBy = "restRoom",
-            cascade = CascadeType.ALL,
-            orphanRemoval = true)
-    @JsonManagedReference
-    @ApiModelProperty(value = "厕所人流数据")
-    private List<InfoPassengerFlow> infoPassengerFlows= new ArrayList<>();
-
-
-    @OneToMany(mappedBy = "restRoom",
-            cascade = CascadeType.ALL,
-            orphanRemoval = true)
-    @JsonManagedReference
-    @ApiModelProperty(value = "厕所气体数据")
-    private List<InfoGas> infoGases= new ArrayList<>();
-
     public void addDeviceCamera(DeviceCamera comment) {
         deviceCameras.add(comment);
         comment.setRestRoom(this);
@@ -104,24 +74,5 @@ public class RestRoom implements Serializable {
         comment.setRestRoom(null);
     }
 
-    public void addDeviceBulletinBoard(DeviceBoard comment) {
-        deviceBoards.add(comment);
-        comment.setRestRoom(this);
-    }
-
-    public void removeDeviceBulletinBoard(DeviceBoard comment) {
-        deviceBoards.remove(comment);
-        comment.setRestRoom(null);
-    }
-
-    public void addDeviceGas(DeviceGas comment) {
-        deviceGases.add(comment);
-        comment.setRestRoom(this);
-    }
-
-    public void removeDeviceGas(DeviceGas comment) {
-        deviceGases.remove(comment);
-        comment.setRestRoom(null);
-    }
 
 }

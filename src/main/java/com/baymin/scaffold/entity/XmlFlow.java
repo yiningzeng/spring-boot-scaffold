@@ -1,8 +1,9 @@
-package com.baymin.restroomapi.entity;
+package com.baymin.scaffold.entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+
 import javax.xml.bind.annotation.*;
 
 @XmlRootElement(name="EventNotificationAlert")
@@ -12,7 +13,7 @@ import javax.xml.bind.annotation.*;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class FuckFlow {
+public class XmlFlow {
     @XmlAttribute
     private String ipAddress;
 

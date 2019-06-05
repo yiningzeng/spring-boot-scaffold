@@ -1,0 +1,12 @@
+
+\.idea/
+
+log/
+
+target/
+
+3-SNAPSHOT\.uml
+
+mvnw
+
+mvnw\.cmd

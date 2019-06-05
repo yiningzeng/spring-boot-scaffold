@@ -1,6 +1,6 @@
-package com.baymin.restroomapi.dao;
+package com.baymin.scaffold.dao;
 
-import com.baymin.restroomapi.entity.Level;
+import com.baymin.scaffold.entity.Level;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.Optional;
