@@ -10,3 +10,5 @@ target/
 mvnw
 
 mvnw\.cmd
+
+src/main/resources/application-baymin\.yml
